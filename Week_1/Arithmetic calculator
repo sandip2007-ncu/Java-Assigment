@@ -1,0 +1,15 @@
+Import java.util.Scanner;
+public class main{
+public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+System.out.println("Enter number one ");
+int number_1 = input.nextInt();
+System.out.println("Enter number two ");
+int number_2 = input.nextInt();
+
+system.out.println("Addition" +(number_1 + number_2));
+system.out.println("Addition" +(number_1 - number_2));
+system.out.println("Addition" +(number_1 * number_2));
+system.out.println("Addition" +(number_1 / number_2));
+}
+}
