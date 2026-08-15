@@ -38,7 +38,7 @@ public class MarksProcessor {
                 failures++;
             }
         }
-        double average = findAverage(sum, count);
+        double average = Average(sum, count);
 
         printResult(count, sum, average, highest, passes, failures);
 
@@ -46,21 +46,21 @@ public class MarksProcessor {
 
         
     }
-    static boolean isValidMark(int mark) {
+    public static boolean isValidMark(int mark) {
         if (mark >= 0 && mark <= 100) {
             return true;
         } else {
             return false;
         }
     }
-    static double findAverage(int sum, int count) {
+    public static double Average(int sum, int count) {
         if (count == 0) {
             return 0;
         }
 
         return (double) sum / count;
     }
-    static void printResult(int count, int sum, double average, int highest, int passes, int failures) {
+    public static void printResult(int count, int sum, double average, int highest, int passes, int failures) {
 
         System.out.println("Valid marks: " + count);
         System.out.println("Sum: " + sum);
