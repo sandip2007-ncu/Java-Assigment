@@ -1,17 +1,32 @@
-class Solution {
-    public int finalValueAfterOperations(String[] operations) {
+import java.util.Scanner;
 
-        int x = 0;
+public class FinalValueOperations {
 
-        for (int i = 0; i < operations.length; i++) {
+    public static void main(String[] args) {
+        printCalculate();
+    }
 
-            if (operations[i].contains("+")) {
-                x = x + 1;
+    public static void printCalculate() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter number of operations:");
+        int num = input.nextInt();
+
+        int x = 1;
+
+        for (int i = 1; i <= num; i++) {
+            System.out.println("Enter operation:");
+            String operation = input.next();
+
+            if (operation.contains("+")) {
+                x++;
             } else {
-                x = x - 1;
+                x--;
             }
         }
 
-        return x;
+        System.out.println("Final value: " + x);
+
+        input.close();
     }
 }
