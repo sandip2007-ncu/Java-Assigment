@@ -54,12 +54,7 @@ public class ProductInventory {
         return Productcounter;
     }
     public String toString() {
-        return "Product{" +
-                "code='" + code + '\'' +
-                ", name='" + name + '\'' +
-                ", unitPrice=" + unitPrice +
-                ", quantity=" + quantity +
-                ", inventoryValue=" + getInventoryValue() +
+        return "Product{" +"code='" + code + '\'' +", name='" + name + '\'' +, unitPrice=" + unitPrice +", quantity=" + quantity +", inventoryValue=" + getInventoryValue() +
                 '}';
     }
 }
