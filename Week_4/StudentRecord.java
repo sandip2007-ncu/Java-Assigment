@@ -1,68 +1,42 @@
 public class StudentRecord {
-
     private int marks;
     private String name;
     private String studentID;
-
-    public StudentRecord(String name, String studentID, int marks) {
-
-        if (name == null || studentID == null) {
-            throw new IllegalArgumentException("Name or Student ID cannot be null");
+    public StudentRecord(String name,String studentId,int marks){
+        if(name==null||studentID==null){
+            System.out.println("Name or StudentID can never be null");
+            return;
         }
-
-        if (marks < 0 || marks > 100) {
-            throw new IllegalArgumentException("Marks must be between 0 and 100");
+        if(marks<0||marks>100){
+            System.out.println("Invalid Marks");
+            return;
         }
-
         this.name = name;
-        this.studentID = studentID;
+        this.studentID = studentId;
         this.marks = marks;
     }
-
-    public int getMarks() {
+    public int getMarks(){
         return marks;
     }
-
-    public String getName() {
+    public String getName(){
         return name;
     }
-
-    public String getStudentID() {
+    public String getStudentId(){
         return studentID;
     }
-
-    public void setMarks(int marks) {
-        if (marks >= 0 && marks <= 100) {
-            this.marks = marks;
-        }
+    public void setMarks(int marks){
+        this.marks = marks;
     }
-
-    public void setName(String name) {
-        if (name != null) {
-            this.name = name;
-        }
+    public void setName(String name){
+        this.name = name;
     }
-
-    public void setStudentID(String studentID) {
-        if (studentID != null) {
-            this.studentID = studentID;
-        }
+    public void setStudentID(String studentID){
+        this.studentID = studentID;
     }
-
-    @Override
-    public String toString() {
-        return "Student ID: " + studentID
-                + ", Name: " + name
-                + ", Marks: " + marks;
-    }
-
     public static void main(String[] args) {
-
-        StudentRecord student =
-                new StudentRecord("Sandip", "25csu215", 99);
-
-        student.setMarks(40);
-
-        System.out.println(student);
+        StudentRecord s1 = new StudentRecord("Sandip", "25csu215", 90);
+        s1.setMarks(50);
+        System.out.println(s1.getMarks());
+        
     }
 }
